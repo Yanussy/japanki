@@ -1,47 +1,42 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Ортопедични джапанки" />
-    </div>
+    <Navbar />
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <footer>
+  <Footer />
+  </footer>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
+
+
+export default {
+  components: {
+    Navbar,
+    Footer,
+  },
+};
+</script>
+
+<style>
+
+#navbarContainer {
+
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+/* Ensure the body and app have no padding/margin that might center the navbar */
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>
