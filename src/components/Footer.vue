@@ -149,7 +149,7 @@
 <style>
 #footer{
   position: absolute;
-  bottom:0;
+  bottom:-3000px;
   width:100%;
 }
 

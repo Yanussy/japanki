@@ -3,21 +3,31 @@
   <header>
     <Navbar />
   </header>
-  <div>
+  <main>
+    <div class ="Tcontainer">
+
+         <Threed/>
+  <div></div>
+    </div>
+  </main>
+
     <footer>
   <Footer />
   </footer>
-  </div>
+
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
-
+import Threed from './components/Threed.vue';
+import Card from './components/Card.vue';
 
 export default {
   components: {
     Navbar,
+
+    Threed,
     Footer,
   },
 };
@@ -25,7 +35,10 @@ export default {
 
 <style>
 
-#navbarContainer {
+ .Tcontainer {
+   display:flex;
+   justify-content: center;
+   padding-top: 100px;
 
 }
 
@@ -34,9 +47,4 @@ export default {
 
 
 
-#app {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 </style>
